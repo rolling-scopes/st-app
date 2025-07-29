@@ -1,10 +1,9 @@
-import { Layout } from "antd";
 import React from "react";
 
 class ContentLayout extends React.Component<any, any>{
   render() {
     return (
-      <Layout>
+      <div>
         <p>Title</p>
         <ul>
           <li>First element</li>
@@ -13,7 +12,7 @@ class ContentLayout extends React.Component<any, any>{
           <li>Fourth element</li>
           <li>Fifth element</li>
         </ul>
-      </Layout>
+      </div>
     );
   }
 }
