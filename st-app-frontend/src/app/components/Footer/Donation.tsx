@@ -1,6 +1,7 @@
-import React from 'react';
-import { Button } from 'antd';
-import HeartTwoTone from '@ant-design/icons/HeartTwoTone';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { Heart } from "lucide-react";
 
 type Props = {
   maxDonatorsShown: number;
@@ -13,15 +14,32 @@ function Donation(props: Props) {
 
   return (
     <>
-      <h3>Thank you for your support!</h3>
-      <h4>Top {maxDonatorsShown} donators:</h4>
-      <p style={{ overflow: 'hidden' }}>
-        <object type="image/svg+xml" data={widgetUrlPartial} />
+      <h3 className="mb-1 font-medium">Thank you for your support!</h3>
+      <h4 className="mb-1 text-sm font-medium">Top {maxDonatorsShown} donators:</h4>
+      <p style={{ overflow: "hidden" }}>
+        <object
+          type="image/svg+xml"
+          data={widgetUrlPartial}
+        />
       </p>
       <p>
-        <Button href="https://opencollective.com/rsschool#section-contribute" target="_blank">
-          <HeartTwoTone twoToneColor="#eb2f96" />
-          ️Make a donation
+        <Button
+          variant="outline"
+          asChild
+          className="mt-4 border border-gray-300 hover:border-blue-500 hover:text-blue-500 hover:bg-white"
+        >
+          <Link
+            href="https://opencollective.com/rsschool#section-contribute"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center cursor-pointer"
+          >
+            <Heart
+              color="#eb2f96"
+              size="16"
+            />
+            Make a donation
+          </Link>
         </Button>
       </p>
     </>

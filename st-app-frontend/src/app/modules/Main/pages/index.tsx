@@ -2,21 +2,17 @@
 import { ContentLayout } from "@/app/components/Content";
 import { FooterLayout } from "@/app/components/Footer";
 import { Header } from "@/app/components/Header";
-import { Layout, theme } from "antd";
-
-const { Content } = Layout;
 
 export function MainPage() {
-  const { token } = theme.useToken();
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <div className="min-h-screen flex flex-col bg-background">
       <Header />
-      <Layout style={{ background: token.colorBgContainer }}>
-        <Content style={{ margin: 16, marginBottom: 32 }}>
+      <main className="flex-1 flex flex-col items-center justify-center p-4">
+        <div className="w-full max-w-4xl">
           <ContentLayout />
-        </Content>
-      </Layout>
+        </div>
+      </main>
       <FooterLayout />
-    </Layout>
+    </div>
   );
 }

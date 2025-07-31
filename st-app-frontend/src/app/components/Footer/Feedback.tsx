@@ -1,24 +1,25 @@
 import React from 'react';
-import LikeTwoTone from '@ant-design/icons/LikeTwoTone';
-import HeartTwoTone from '@ant-design/icons/HeartTwoTone';
-import TrophyTwoTone from '@ant-design/icons/TrophyTwoTone';
+import { ThumbsUp } from 'lucide-react';
+import { Trophy } from 'lucide-react';
+import { Heart } from 'lucide-react';
+
 import { Menu } from './Menu';
 
 const publicRoutes = [
   {
-    icon: <LikeTwoTone />,
+    icon: <ThumbsUp color="blue" size={16} />,
     name: 'Say Thank you (Discord >> #gratitude)',
     link: `/gratitude`,
     newTab: false,
   },
   {
-    icon: <TrophyTwoTone twoToneColor="#d60000" />,
+    icon: <Trophy color="#d60000" size={16} />,
     name: 'Heroes page',
     link: `/heroes`,
     newTab: false,
   },
   {
-    icon: <HeartTwoTone twoToneColor="#eb2f96" />,
+    icon: <Heart color="#eb2f96" size={16} />,
     name: 'Feedback on RS School',
     link: `https://docs.google.com/forms/d/1F4NeS0oBq-CY805aqiPVp6CIrl4_nIYJ7Z_vUcMOFrQ/viewform`,
     newTab: true,

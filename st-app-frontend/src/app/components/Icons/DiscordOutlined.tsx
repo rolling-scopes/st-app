@@ -1,6 +1,4 @@
 import * as React from 'react';
-import Icon from '@ant-design/icons/lib/components/Icon';
-import type { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon';
 
 const svg = () => (
   <svg width="1em" height="1em" fill="currentColor" viewBox="0 -7 71 71" xmlns="http://www.w3.org/2000/svg">
@@ -10,6 +8,16 @@ const svg = () => (
   </svg>
 );
 
-export const DiscordOutlined = (props: Partial<CustomIconComponentProps>) => {
-  return <Icon component={svg} {...props} />;
+export const DiscordOutlined = (props: React.HTMLAttributes<HTMLSpanElement> & { size?: number | string }) => {
+  const { size, style, ...restProps } = props;
+  const iconStyle = { ...style, fontSize: size };
+
+  return (
+    <span
+      style={iconStyle}
+      {...restProps}
+    >
+      {svg()}
+    </span>
+  );
 };

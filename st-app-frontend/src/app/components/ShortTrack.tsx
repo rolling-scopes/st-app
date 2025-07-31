@@ -1,5 +1,5 @@
 import Image from 'next/image';
 
 export function ShortTrack() {
-  return <Image src="/static/svg/short-track-logo.svg" alt="Short Track" width={110} height={32} />;
+  return <Image className="mr-4" src="/static/images/logo-rsschool-st.png" alt="Short Track" width={80} height={25} />;
 }
