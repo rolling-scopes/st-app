@@ -14,7 +14,9 @@ const svg = () => (
   </svg>
 );
 
-export const GitHubOutlined = (props: React.HTMLAttributes<HTMLSpanElement> & { size?: number | string }) => {
+export const GitHubOutlined = (
+  props: React.HTMLAttributes<HTMLSpanElement> & { size?: number | string }
+) => {
   const { size, style, ...restProps } = props;
   const iconStyle = { ...style, fontSize: size };
 

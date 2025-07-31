@@ -15,7 +15,9 @@ function Donation(props: Props) {
   return (
     <>
       <h3 className="mb-1 font-medium">Thank you for your support!</h3>
-      <h4 className="mb-1 text-sm font-medium">Top {maxDonatorsShown} donators:</h4>
+      <h4 className="mb-1 text-sm font-medium">
+        Top {maxDonatorsShown} donators:
+      </h4>
       <p style={{ overflow: "hidden" }}>
         <object
           type="image/svg+xml"
@@ -36,7 +38,7 @@ function Donation(props: Props) {
           >
             <Heart
               color="#eb2f96"
-              size="16"
+              size={16}
             />
             Make a donation
           </Link>
