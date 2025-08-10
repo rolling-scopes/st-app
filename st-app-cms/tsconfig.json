@@ -3,7 +3,7 @@
     "module": "CommonJS",
     "moduleResolution": "Node",
     "lib": ["ES2020"],
-    "target": "ES2019",
+    "target": "ES2020",
     "strict": false,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -13,7 +13,12 @@
     "noEmitOnError": true,
     "noImplicitThis": true,
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["node", "koa", "koa-bodyparser", "@strapi/types"]
   },
   "include": [
     // Include root files
