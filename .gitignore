@@ -40,3 +40,9 @@ coverage/
 # Temporary files
 *.tmp
 *.temp
+docs/
+
+# Cursor
+memory-bank/
+.cursor/
+
