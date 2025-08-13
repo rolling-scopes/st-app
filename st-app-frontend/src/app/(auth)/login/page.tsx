@@ -1,18 +1,13 @@
 "use client";
-
-import styles from "./LoginPage.module.css";
+import React from "react";
+import styles from "./LoginPage.module.scss";
 import Image from "next/image";
 
-const GITHUB_CLIENT_ID = "YOUR_GITHUB_CLIENT_ID";
-
 const LoginPage = () => {
-  const redirectToGitHub = () => {
-    const githubAuthUrl = "https://github.com/login/oauth/authorize";
-    const redirectUri = encodeURIComponent(
-      "http://localhost:3000/auth/github/callback"
-    );
-    const scope = "read:user user:email";
-    window.location.href = `${githubAuthUrl}?client_id=${GITHUB_CLIENT_ID}&redirect_uri=${redirectUri}&scope=${scope}`;
+  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+
+  const handleLogin = () => {
+    window.location.href = `${BACKEND_URL}/api/connect/github`;
   };
 
   return (
@@ -33,8 +28,8 @@ const LoginPage = () => {
       </div>
       <div className={styles.right}>
         <div className={styles.loginBox}>
-          <h1>Log In</h1>
-          <button className={styles.githubButton} onClick={redirectToGitHub}>
+          <h1 className={styles.title}>Log In</h1>
+          <button className={styles.githubButton} onClick={handleLogin}>
             Sign up with GitHub
           </button>
         </div>

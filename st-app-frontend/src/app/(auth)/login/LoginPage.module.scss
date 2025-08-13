@@ -1,18 +1,21 @@
 .container {
   display: flex;
   height: 100vh;
-  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "Noto Sans",
-    Helvetica, Arial, sans-serif;
 }
 
-.left {
-  background-color: rgb(255, 218, 31);
+.left,
+.right {
   flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+}
+
+.left {
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
 }
 
 .left img {
@@ -24,14 +27,8 @@
 .left p {
   font-size: 1.2rem;
   text-align: center;
-  color: #000;
-}
-
-.right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: var(--dark);
+  max-width: 300px;
 }
 
 .loginBox {
@@ -45,8 +42,8 @@
 
 .githubButton {
   padding: 1rem 2rem;
-  background-color: #24292e;
-  color: #fff;
+  background-color: var(--dark-gray);
+  color: var(--light);
   border: none;
   font-size: 1rem;
   cursor: pointer;
@@ -55,5 +52,26 @@
 }
 
 .githubButton:hover {
-  background-color: #000;
+  background-color: var(--dark);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    flex: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .left img {
+    max-width: 150px;
+  }
+
+  .left p {
+    font-size: 1rem;
+  }
 }

@@ -33,6 +33,7 @@ jspm_packages/
 *.pid
 *.seed
 *.pid.lock
+*.env
 
 # Coverage
 coverage/

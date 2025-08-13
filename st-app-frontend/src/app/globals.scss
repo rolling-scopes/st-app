@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fff;
   --foreground: #171717;
+  --primary: rgb(255, 218, 31);
+  --dark: #000;
+  --dark-gray: #24292e;
+  --light: #f6f8fa;
 }
 
 @theme inline {
@@ -12,7 +16,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -22,5 +26,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif;
 }
