@@ -4,10 +4,8 @@ import styles from "./LoginPage.module.scss";
 import Image from "next/image";
 
 const LoginPage = () => {
-  const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
-
   const handleLogin = () => {
-    window.location.href = `${BACKEND_URL}/api/connect/github`;
+    window.location.href = `${process.env.NEXT_PUBLIC_STRAPI_URL}/api/connect/github`;
   };
 
   return (
@@ -21,10 +19,8 @@ const LoginPage = () => {
           layout="responsive"
           quality={75}
         />
-        <p>
-          Welcome to RS School! Learn, code, and grow with our open education
-          platform.
-        </p>
+        <p>Welcome to RS School!</p>
+        <p> Learn, code, and grow with our open education platform.</p>
       </div>
       <div className={styles.right}>
         <div className={styles.loginBox}>
