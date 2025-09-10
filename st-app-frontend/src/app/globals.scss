@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fff;
+  --foreground: #171717;
+  --primary: rgb(255, 218, 31);
+  --dark: #000;
+  --dark-gray: #24292e;
+  --light: #f6f8fa;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+@layer base {
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.2rem;
+    color: var(--dark);
+  }
+}
+
+@layer components {
+  .centered-p {
+    text-align: center;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, blinkmacsystemfont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif;
+}
